@@ -2,9 +2,6 @@ import "reflect-metadata";
 import { startServer } from "./server";
 import { connect } from "./config/typeOrm";
 
-
-
-
 async function main(){
     connect()
     const PORT = 3000 || 30001;
