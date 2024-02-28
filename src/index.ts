@@ -2,13 +2,12 @@ import "reflect-metadata";
 import { startServer } from "./server";
 import { connect } from "./config/typeOrm";
 
-async function main(){
-    connect()
-    const PORT = 3000 || 30001;
-    const app = await startServer();
-    app.listen(PORT)
-    console.log(`Server on ${PORT}`);
-    
-}
+const main = async () => {
+  connect();
+  const PORT = 3000 || 30001;
+  const app = await startServer();
+  app.listen(PORT);
+  console.log("Server running on -> http://localhost:3000/graphql");
+};
 
 main();
